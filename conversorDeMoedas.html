@@ -41,6 +41,34 @@
             let trocandoValores = 'The result in Dollar is US$' + valorEmDolar;
             elementoMoedaConvertida.innerHTML = trocandoValores;   
             }
+
+            //convertendo libra para real    
+            function ConvertidoGbp() {
+            let elementoValor3 = document.getElementById('valorGbp');
+            let valorGbp = elementoValor3.value;
+            let valorEmEsterlinaNumerico = parseInt(valorGbp); 
+                
+            let valorEmLibra = valorEmEsterlinaNumerico.toFixed(2) * 7.27; /* Cotação do dia 3 de outubro 2021 */
+            console.log(valorEmLibra);
+                
+            let elementoMoedaConvertida3 = document.getElementById('trocandoValores3');
+            let trocandoValores3 = 'The result in Real is R$ ' + valorEmLibra;
+            elementoMoedaConvertida3.innerHTML = trocandoValores3;   
+            }
+
+            //convertendo euro para real
+            function ConvertidoEmEuro() {
+            let elementoValor4 = document.getElementById('valorEuro');
+            let valorEuro = elementoValor4.value;
+            let valorEmEuroNumerico = parseInt(valorEuro); 
+
+            let valorEmEuro = valorEmEuroNumerico.toFixed(2) * 6.22; /* Cotação do dia 3 de outubro 2021 */
+            console.log(valorEmEuro);
+            
+            let elementoMoedaConvertida4 = document.getElementById('trocandoValores4');
+            let trocandoValores4 = 'The result in Real is R$' + valorEmEuro;
+            elementoMoedaConvertida4.innerHTML = trocandoValores4;   
+            }
         </script>
         
         <div class="container1">
@@ -48,11 +76,11 @@
             Currency Converter
             
             <p class="page-subtitle1">
-            Enter Values (USD BRL)
+            Enter Values (BRL - USD - GBP - EURO)
             </p>
 
             <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br>
-            <label for="moeda">Enter the Value in Dollar US$</label><br>   
+            <label for="moeda">Enter the Value in American Dollar US$</label><br>   
             <input type="number" id="valor" size="2" /><br>
             <button type="submit" onclick="Converter()">to Convert</button>
             <h2 id="valorConvertido"></h2>
@@ -60,25 +88,39 @@
         </div>
 
         <div class="container2">
-            <h2 class="page-subtitle2">
-            Enter the Value in Real R$
+            <h2 class="page-subtitle2">Enter the Value in Real R$</h2>
             
-            <p class="page-subtitle1">
-            
-            </p>
-             <!-- <label for="moeda">Enter the Value in Dólar</label><br> -->   
+            <!-- caixa de valores -->
             <input type="number" id="valores" size="2" /><br>
             <button type="submit" onclick="Convertido()">to Convert</button>
             <h2 id="trocandoValores"></h2>
+        </div>
+
+        <div class="container3">
+            <h2 class="page-subtitle3">Enter the Value in Libra Esterlina GBP £ </h2>
+
+            <!-- caixa de valores -->
+            <input type="number" id="valorGbp" size="2" /><br>
+            <button type="submit" onclick="ConvertidoGbp()">to Convert</button>
+            <h2 id="trocandoValores3"></h2>
+        </div>
+
+        <div class="container4">
+            <h2 class="page-subtitle4">Enter the Value in Euro €</h2>
+
+            <!-- caixa de valores -->
+            <input type="number" id="valorEuro" size="2" /><br>
+            <button type="submit" onclick="ConvertidoEmEuro()">to Convert</button>
+            <h2 id="trocandoValores4"></h2>
         </div>
 
         
         <a href="https://alura.com.br/" target="_blank">
         <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
         <img src="./flag-usa.png" alt="" class="flag-usa">
-        <img src="./flag-brazil.png" alt="" class="flag-brazil"> 
-
-      
+        <img src="./flag-brazil.png" alt="" class="flag-brazil">
+        <img src="./flag-uk1.png" alt="" class="flag-uk">
+        <img src="./flag-euro.png" alt="" class="flag-euro"> 
     </body>
 
 </html>
