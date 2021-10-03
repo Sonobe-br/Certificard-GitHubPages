@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./conversorDeMoedas.css">
+
+        <title>Currency Converter - Class2</title>
+       
+    </head>
+
+    <body>
+
+        <script>
+            //conversão de valores em dólar para real
+            function Converter() {
+            var valorElemento = document.getElementById('valor');
+            var valor = valorElemento.value;
+            var valorEmRealNumerico = parseInt(valor); 
+            //console.log(valorEmDolarNumerico);
+            
+            var valorEmReal = valorEmRealNumerico.toFixed(2) * 5.38; /* Cotação do dia 2 de outubro 2021 */
+            console.log(valorEmReal);
+            
+            var elementoValorConvertido = document.getElementById('valorConvertido');
+            var valorConvertido = 'The result in Real is R$' + valorEmReal;
+            elementoValorConvertido.innerHTML = valorConvertido;   
+            }
+        
+            //convertendo real para dólar
+            function Convertido() {
+            let elementoValor = document.getElementById('valores');
+            let valores = elementoValor.value;
+            let valorEmDolarNumerico = parseInt(valores); 
+                
+            let valorEmDolar = valorEmDolarNumerico.toFixed(2) / 5.00; /* Cotação do dia 2 de outubro 2021 */
+            console.log(valorEmDolar);
+            
+            let elementoMoedaConvertida = document.getElementById('trocandoValores');
+            let trocandoValores = 'The result in Dollar is US$' + valorEmDolar;
+            elementoMoedaConvertida.innerHTML = trocandoValores;   
+            }
+        </script>
+        
+        <div class="container1">
+            <h1 class="page-title1"> 
+            Currency Converter
+            
+            <p class="page-subtitle1">
+            Enter Values (USD BRL)
+            </p>
+
+            <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br>
+            <label for="moeda">Enter the Value in Dollar US$</label><br>   
+            <input type="number" id="valor" size="2" /><br>
+            <button type="submit" onclick="Converter()">to Convert</button>
+            <h2 id="valorConvertido"></h2>
+
+        </div>
+
+        <div class="container2">
+            <h2 class="page-subtitle2">
+            Enter the Value in Real R$
+            
+            <p class="page-subtitle1">
+            
+            </p>
+             <!-- <label for="moeda">Enter the Value in Dólar</label><br> -->   
+            <input type="number" id="valores" size="2" /><br>
+            <button type="submit" onclick="Convertido()">to Convert</button>
+            <h2 id="trocandoValores"></h2>
+        </div>
+
+        
+        <a href="https://alura.com.br/" target="_blank">
+        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+        <img src="./flag-usa.png" alt="" class="flag-usa">
+        <img src="./flag-brazil.png" alt="" class="flag-brazil"> 
+
+      
+    </body>
+
+</html>
