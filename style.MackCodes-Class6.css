@@ -1,0 +1,229 @@
+body {
+    background-image: url("./mars2.jpg");
+    background-color: #000000;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    overflow-x: hidden; /* overflow-w e y removel a scrollagem horizontal */
+    overflow-y: scroll;  
+}
+
+.container {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 20px;
+}
+
+.fa-instagram{
+    background: #00f5e1;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-transform: lowercase;
+    width: 150px;
+    height: 30px;
+    position: relative;
+    float: left;
+    left: 529px;
+    top: 9px;
+    z-index: 10;
+    transition: all 150ms cubic-bezier(.175, .885, .32, 1.275);
+    font-weight: bolder;
+    box-shadow: 12px 5px 5px #000000;
+}
+
+.fa-twitter{
+    background: #f5b400;
+    border-radius: 4px;
+    border: none;
+    width: 150px;
+    height: 30px;
+    position: relative;
+    float: left;
+    left: 550px;
+    top: 9px;
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: bolder;
+    box-shadow: 12px 5px 5px #000000;
+}
+
+.fa-discord{
+    background: #1df500;
+    border-radius: 4px;
+    width: 150px;
+    height: 30px;
+    position: relative;
+    float: left;
+    left: 573px;
+    top: 9px;
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: bolder;
+    box-shadow: 12px 5px 5px #000000;
+}
+
+.fa-github{
+    background:#000000;
+    color: #ffffff;
+    border-radius: 4px;
+    display: inline;
+    width: 150px;
+    height: 30px;
+    position: relative;
+    float: left;
+    left: 595px;
+    top: 9px;
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: bolder;
+    box-shadow: 12px 5px 5px #000000;
+
+}
+
+.page-title {
+    position: relative;
+    z-index: 10; /* sobrepôs um elemento sobre o outro */
+    font-size: 10px;
+    font-weight: bolder;
+    color: #042379;
+    left: 160px;
+    max-height: 160px;
+    top: 270px;   
+}
+
+.page-subtitle {
+    position: relative;
+    font-size: 9px;
+    font-weight:lighter;
+    left: 430px;
+    color: #042379;
+    top: 235px;  
+}
+
+.page-logo {
+    position: relative;
+    right: 405px;
+    width: 78px;
+    top: 424px;
+    transform: rotate(-4deg);
+    opacity: .9;
+}
+
+.ticket-nasa {
+    position: relative;
+    float: right;
+    left: -210px;
+    top: 150px;
+}   
+  
+.form-wrapper {
+    margin: 0 0 15px;   
+}
+  
+.form-wrapper input {
+    position: relative;
+    top: 150px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+  
+.form-wrapper button {
+    position: relative;
+    top: 150px;
+    border: 0;
+    color: #ffffff;
+    background: #da1e26;
+    font-weight: bold;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+  
+.form-wrapper button:hover {
+    opacity: 0.5;
+}
+
+.video{
+    position: relative;
+    left: 690px;
+    top: 225px;
+    text-transform: uppercase;
+
+}
+
+/* p{
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    font-size: 30px;
+    top: -100px;
+    left: 350px;
+
+}
+ */
+.Copyright { 
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    left: 350px;
+    top: 257px;
+	font-size: 15px;
+	color: #0f0f0f;   
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1280px) {
+    .body{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .container{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    
+    .page-title{
+        position: static;
+        float: none;
+    }
+    
+    .page-logo{
+        position: static;
+        float: none;
+    }
+    
+    .ticket-nasa {
+        position: static;
+        float: none;
+    }  
+
+    .form-wrapper{
+        position: static;
+        float: none;        
+    }
+
+    .form-wrapper input{
+       float: none;
+       /* width: 100%; */
+    }
+
+    .form-wrapper button{
+        float: none;
+        width: 100%;
+    }
+
+    .Copyright{
+        position: absolute;
+
+    }
+}
